@@ -17,11 +17,3 @@ spec:
       services:
         - name: guestbook-ui
           port: 80
-apiVersion: traefik.io/v1alpha1
-kind: Middleware
-metadata:
-  name: demo-stripprefix
-spec:
-  stripPrefix:
-    prefixes:
-      - /demo
