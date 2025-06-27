@@ -1,8 +1,8 @@
 apiVersion: traefik.io/v1alpha1
 kind: Middleware
 metadata:
-  name: demo-stripprefix
+  name: test-stripprefix
 spec:
   stripPrefix:
     prefixes:
-      - /demo
+      - /test

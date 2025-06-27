@@ -10,9 +10,9 @@ spec:
     - web
   routes:
     - kind: Rule
-      match: PathPrefix(`/demo`)
+      match: PathPrefix(`/test`)
       middlewares:
-        - name: demo-stripprefix
+        - name: test-stripprefix
       priority: 10
       services:
         - name: guestbook-ui
