@@ -10,7 +10,12 @@ spec:
     - web
   routes:
     - kind: Rule
-      match: PathPrefix(`/`)
+      match: PathPrefix(`/demo`)
+      middlewares:
+        - name: strip-auth-prefix
+          stripPrefix:
+            prefixes:
+              - /demo
       priority: 10
       services:
         - name: guestbook-ui
