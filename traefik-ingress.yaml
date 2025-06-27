@@ -12,11 +12,16 @@ spec:
     - kind: Rule
       match: PathPrefix(`/demo`)
       middlewares:
-        - name: strip-auth-prefix
-          stripPrefix:
-            prefixes:
-              - /demo
+        - name: demo-stripprefix
       priority: 10
       services:
         - name: guestbook-ui
           port: 80
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: demo-stripprefix
+spec:
+  stripPrefix:
+    prefixes:
+      - /demo
