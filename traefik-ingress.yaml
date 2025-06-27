@@ -1,8 +1,7 @@
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: argocd-server
-  namespace: argocd
+  name: traefik-ingress
 spec:
   entryPoints:
     - websecure
@@ -14,5 +13,3 @@ spec:
       services:
         - name: guestbook-ui
           port: 80
-  tls:
-    certResolver: default
