@@ -9,7 +9,7 @@ spec:
     - web
   routes:
     - kind: Rule
-      match: ClientIP(`0.0.0.0/0`)
+      match: PathPrefix()
       priority: 10
       services:
         - name: guestbook-ui
